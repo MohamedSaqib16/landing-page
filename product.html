@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Product Details - CORVEX</title>
+    <meta name="description" id="page-description" content="Premium corporate gifting products">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <h2><a href="index.html" style="text-decoration: none; color: inherit;">CORVEX</a></h2>
+                    <p class="logo-tagline">Corporate Gifting</p>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="cart-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Loading State -->
+    <div id="loading-state" class="loading-state">
+        <div class="loading-spinner"></div>
+        <p>Loading product details...</p>
+    </div>
+
+    <!-- Error State -->
+    <div id="error-state" class="error-state" style="display: none;">
+        <div class="error-content">
+            <h2>Product Not Found</h2>
+            <p>The product you're looking for doesn't exist or has been removed.</p>
+            <a href="index.html#products" class="cta-button">Browse Products</a>
+        </div>
+    </div>
+
+    <!-- Product Details Container -->
+    <main id="product-container" class="product-details-container" style="display: none;">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="index.html#products">Products</a>
+                <span>/</span>
+                <span id="breadcrumb-product-name"></span>
+            </nav>
+
+            <div class="product-details-grid">
+                <!-- Product Images -->
+                <div class="product-images-section">
+                    <div class="product-main-image" id="main-image">
+                        <!-- Main image will be inserted here -->
+                    </div>
+                    <div class="product-image-gallery" id="image-gallery">
+                        <!-- Gallery thumbnails will be inserted here -->
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info-section">
+                    <div class="product-category" id="product-category"></div>
+                    <h1 class="product-title" id="product-title"></h1>
+                    <p class="product-short-description" id="product-short-description"></p>
+                    
+                    <div class="product-price-section">
+                        <span class="product-price" id="product-price"></span>
+                        <span class="product-original-price" id="product-original-price"></span>
+                    </div>
+
+                    <div class="product-stock-status" id="product-stock-status">
+                        <!-- Stock status will be inserted here -->
+                    </div>
+
+                    <div class="product-actions">
+                        <div class="product-action-buttons">
+                            <button class="add-to-cart-btn product-action-btn" id="add-to-cart-btn">
+                                Add to Cart
+                            </button>
+                            <button class="download-catalog-btn product-action-btn" id="download-catalog-btn">
+                                Download Product Catalog
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Specifications -->
+                    <div class="product-specifications">
+                        <h3>Specifications</h3>
+                        <dl class="specs-list" id="specs-list">
+                            <!-- Specifications will be inserted here -->
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full Description & Features -->
+            <div class="product-details-tabs">
+                <div class="tab-content active" id="description-tab">
+                    <h2>Description</h2>
+                    <p class="product-full-description" id="product-full-description"></p>
+                </div>
+                <div class="tab-content" id="features-tab">
+                    <h2>Features</h2>
+                    <ul class="features-list" id="features-list">
+                        <!-- Features will be inserted here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CORVEX</h3>
+                    <p>Everything you need to start your office journey.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#products">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Twitter">TW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CORVEX. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products-data.js"></script>
+    <script src="product-details.js"></script>
+    <script src="page-transitions.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "corvex-website",
+  "version": "1.0.0",
+  "description": "CORVEX Corporate Gifting - Product Slider Landing Page",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server . -p 8000 -o",
+    "serve": "npx http-server . -p 8000",
+    "build": "node build.js",
+    "start": "npm run serve"
+  },
+  "keywords": [
+    "corvex",
+    "corporate-gifting",
+    "product-slider",
+    "landing-page"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
